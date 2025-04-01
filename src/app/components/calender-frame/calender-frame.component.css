@@ -1,0 +1,65 @@
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+#customers{
+    border-collapse: collapse; /* this is make the table border collapse and collide */    
+}
+
+#customers td, #customers th {
+    border: 1px solid #ddd;
+    width: 60px;
+    padding: 8px;
+}
+
+#customers td{
+    height: 45px ;
+}
+
+#customers td span {
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1px;
+    padding: 3px;
+}
+.ok {
+    background-color: #04AA6D;
+}
+.pen{
+    background-color: rgb(250, 232, 134);
+}
+
+.rej{
+    background-color: rgb(250, 51, 51);
+}
+
+#customers #name{
+    width: 200px;
+    text-align: center;
+}
+  
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+  
+#customers tr:hover {background-color: #ddd;}
+  
+#customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    width: 60px;
+    text-align: left;
+    background-color: #04AA6D;
+    color: white;
+}
+
+#customers th span {
+    display: block;
+    padding-top: 3px;
+    color: #0f241dbd;
+}

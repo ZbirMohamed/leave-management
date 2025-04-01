@@ -1,0 +1,32 @@
+<div class="container">
+    <div>
+        <div>
+            <h4>  Nom Complet: <span >{{data().fullName}}</span>   </h4>
+            <h4>  Compte:  {{data().id}} </h4>
+            <h4>  Solde : {{data().solde}}<span>  DH  </span> </h4>
+        </div>
+
+        <table class="table" id="customers">
+            <thead>
+                <tr>
+                    <!-- Basee sur un calendrier de 5 jours -->
+                    <th>Date Virement</th>
+                    <th>Montant</th>
+                    <th>Beneficier</th>
+                    <th>Motif</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Ceci par employe-->
+                 @for (item of data().virements; track $index) {
+                    <tr>
+                        <td id="name"> {{item.dateVirement}}  </td>
+                        <td> {{item.montant}} </td>
+                        <td> {{item.beneficier}} </td>
+                        <td> {{item.motif}} </td>
+                    </tr>
+                 }
+            </tbody>
+        </table>
+    </div>
+</div>
