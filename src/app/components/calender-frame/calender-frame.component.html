@@ -3,7 +3,15 @@
         <div>
             <h4>  Nom Complet: <span >{{data().fullName}}</span>   </h4>
             <h4>  Compte:  {{data().id}} </h4>
-            <h4>  Solde : {{data().solde}}<span>  DH  </span> </h4>
+            <h4>  Solde : {{data().solde | customCurrency:currency }} </h4>
+
+
+            <select [(ngModel)]="currency">
+                <option value="$">USD ($)</option>
+                <option value="€">EUR (€)</option>
+                <option value="£">GBP (£)</option>
+            </select>
+
         </div>
 
         <table class="table" id="customers">
@@ -21,7 +29,7 @@
                  @for (item of data().virements; track $index) {
                     <tr>
                         <td id="name"> {{item.dateVirement}}  </td>
-                        <td> {{item.montant}} </td>
+                        <td> {{item.montant | customCurrency:currency }} </td>
                         <td> {{item.beneficier}} </td>
                         <td> {{item.motif}} </td>
                     </tr>
